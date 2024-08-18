@@ -13,7 +13,7 @@ import time
 modelh5 = tensorflow.keras.models.load_model('model.h5')
 
 def show_page():
-    st.write("<h3 style='text-align: center; color: blue;'>سامانه تشخیص تحلیل رفتگی بافت مغز سالمندان 🩺</h3>", unsafe_allow_html=True)
+    st.write("<h3 style='text-align: center; color: blue;'>سامانه تشخیص آلزایمر با اسکن بافت مغز سالمندان 🩺</h3>", unsafe_allow_html=True)
     st.write("<h5 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h5>", unsafe_allow_html=True)
     st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
     with st.sidebar:
@@ -25,17 +25,15 @@ def show_page():
         with col3:
             st.write(' ')
         st.divider()
-        st.write("<h4 style='text-align: center; color: black;'>تشخیص زوال عقل یا دمانس زودرس</h4>", unsafe_allow_html=True)
+        st.write("<h4 style='text-align: center; color: black;'>تشخیص مراحلو اولیه آلزایمر</h4>", unsafe_allow_html=True)
         st.write("<h4 style='text-align: center; color: gray;'>با استفاده از تصاویر اسکن مغزی</h4>", unsafe_allow_html=True)
-        st.write("<h4 style='text-align: center; color: gray;'>تحلیل افکار کاربر</h4>", unsafe_allow_html=True)
-        st.write("<h4 style='text-align: center; color: gray;'>و بررسی پرسشنامه</h4>", unsafe_allow_html=True)
         st.divider()
         st.write("<h5 style='text-align: center; color: black;'>طراحی و توسعه</h5>", unsafe_allow_html=True)
         st.write("<h5 style='text-align: center; color: black;'>حمیدرضا بهرامی</h5>", unsafe_allow_html=True)
 
 
     container = st.container(border=True)
-    container.write("<h6 style='text-align: right; color: gray;'>تشخیص آلزایمر و تحلیل رفتن مغز با اسکن مغزی 🧠</h6>", unsafe_allow_html=True)
+    container.write("<h6 style='text-align: right; color: gray;'> MRI تشخیص آلزایمر از طریق میزان تحلیل رفتگی بافت مغز در 🧠</h6>", unsafe_allow_html=True)
 
     image = st.file_uploader('آپلود تصویر', type=['jpg', 'jpeg'])
     button = st.button('تحلیل اسکن مغزی')       
