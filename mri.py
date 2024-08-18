@@ -10,10 +10,12 @@ from keras.models import Sequential, load_model
 from PIL import Image
 import time
 
+st.set_page_config(page_title='جوانی جمعیت / تکریم سالمندان - RoboAi', layout='centered', page_icon='🩺')
+
 modelh5 = tensorflow.keras.models.load_model('model.h5')
 
 def show_page():
-    st.write("<h3 style='text-align: center; color: blue;'>سامانه تشخیص آلزایمر با اسکن بافت مغز سالمندان 🩺</h3>", unsafe_allow_html=True)
+    st.write("<h3 style='text-align: center; color: blue;'>سامانه تشخیص آلزایمر با اسکن بافت مغز سالمندان 🧠</h3>", unsafe_allow_html=True)
     st.write("<h5 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h5>", unsafe_allow_html=True)
     st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
     with st.sidebar:
@@ -34,6 +36,7 @@ def show_page():
 
     container = st.container(border=True)
     container.write("<h6 style='text-align: right; color: gray;'> MRI تشخیص آلزایمر از طریق میزان تحلیل رفتگی بافت مغز در 🧠</h6>", unsafe_allow_html=True)
+    container.write("<h6 style='text-align: right; color: gray;'> پاسخ سامانه زیر عکس قابل رویت خواهد بود ⚠️</h6>", unsafe_allow_html=True)
 
     image = st.file_uploader('آپلود تصویر', type=['jpg', 'jpeg'])
     button = st.button('تحلیل اسکن مغزی')       
